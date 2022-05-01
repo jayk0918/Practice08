@@ -8,22 +8,23 @@ public class FriendApp {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		Friend[] friendArray = new Friend[3];
+		String friendsInfo;
+		String[] infoSplit;
+		Friend[] friendsArray = new Friend[3];
 		
 		System.out.println("친구를 3명 등록해 주세요");
 		
-		for(int i=0; i<=3; i++) {
-			String friendsInfo = sc.nextLine();
-			sc.nextLine();
-			sc.nextLine();
-			friendArray[i].name(friendsInfo.substring(0,3));
-			friendArray[i].hp(friendsInfo.substring(4,17));
-			friendArray[i].school(friendsInfo.substring(18));
+		for(int i=0; i<friendsArray.length; i++) {
+			friendsInfo = sc.nextLine();
+			infoSplit = friendsInfo.split(" ");
+			friendsArray[i] = new Friend(infoSplit[0],infoSplit[1],infoSplit[2]);
 		}
 		
-		for(int i=0; i<friendArray.length; i++) {
-			friendArray[i].showInfo();
+		for(int i=0; i<friendsArray.length; i++) {
+			friendsArray[i].showInfo();
 		}
+		
+		
 		
 		
 		sc.close();

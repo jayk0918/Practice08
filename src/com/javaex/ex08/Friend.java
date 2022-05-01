@@ -8,15 +8,15 @@ public class Friend {
 	private String school;
 	
 	// 생성자
-	Friend(){}
+	public Friend() {}
 	
-	Friend(String name, String hp, String school){
+	public Friend(String name, String hp, String school) {
 		this.name = name;
 		this.hp = hp;
 		this.school = school;
 	}
-	
 	// 메소드 gs
+
 	public String getName() {
 		return name;
 	}
@@ -47,22 +47,11 @@ public class Friend {
 		return "Friend [name=" + name + ", hp=" + hp + ", school=" + school + "]";
 	}
 	
-	public void showInfo() {
-		System.out.println("이름:"+ name + " 핸드폰:" + hp + " 학교:" + school);
-	}
-
-	public void name(String name) {
-		this.name = name;
-	}
-	
-	public void hp(String hp) {
-		this.hp = hp;
-	}
-	
-	public void school(String school) {
-		this.school = school;
+	public void showInfo(){
+		System.out.println("이름:" + name + "  핸드폰:" + hp + "  학교:" + school);
 	}
 	
 	
-
+	
+	
 }
