@@ -12,9 +12,11 @@ public class SumApp {
 		String numLine = sc.nextLine();
 
 		//코드를 작성하세요
-		
-		
-		
+		String[] numSplit = numLine.split(" ");
+		for(int i=0; i<numSplit.length; i++) {
+			int numbers = Integer.parseInt(numSplit[i]);
+			sum += numbers;
+		}
 		
 		System.out.println("합:" + sum);
 		
